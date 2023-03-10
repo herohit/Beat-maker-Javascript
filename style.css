@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+i,svg{
+    pointer-events: none;
+}
+
+.kick-pad,.snare-pad,.hihat-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.kick-pad{
+    background: rgb(146, 226, 232);
+}
+
+.snare-pad{
+    background: rgb(234, 233, 139);
+}
+
+.hihat-pad{
+    background: rgb(244, 168, 249);
+}
+
+/* Avtive class */
+.kick-pad.active{
+    
+    background: rgb(27, 219, 233);
+}
+.snare-pad.active{
+    background: rgb(232, 228, 22);
+}
+
+.hihat-pad.active{
+    background: rgb(231, 31, 246);
+}
+
+
+
+
+.hihat-track,.kick-track,.snare-track{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top:5rem;
+}
+
+.hihat,.snare,.kick{
+    display: flex;
+}
+
+.sequencer{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls button{
+    padding: 1rem;
+    border: none;
+    background: rgb(87, 87, 87);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:all 0.5s ease ;
+}
+
+.pad{
+    transition: all 0.5s ease;
+}
+
+
+.play{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background:rgb(87, 87, 87) ;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.play.active{
+    background:rgb(91, 20, 20) ;
+    color: rgb(255, 255, 255);
+}
+
+select{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.mute.active{
+    background: rgb(140, 139, 139);
+}
+
+.tempo{
+    margin: 3rem;
+    width: 30%;
+}
+
+.tempo-slider{
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(80, 80, 80);
+    cursor: pointer;
+    border-radius:0.5rem ;
+    color: aliceblue;
+
+}
+
+.tempo-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    overflow: visible;
+  }
+
+  .tempo p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+  }
+
+@keyframes playTrack {
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
